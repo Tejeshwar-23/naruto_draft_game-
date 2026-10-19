@@ -1,0 +1,411 @@
+.home-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background Shinobi Kanji Watermark (忍) */
+.watermark-shinobi {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Cinzel', serif;
+  font-size: clamp(280px, 45vw, 550px);
+  font-weight: 900;
+  color: rgba(255, 106, 0, 0.025);
+  user-select: none;
+  pointer-events: none;
+  z-index: -1;
+  line-height: 1;
+}
+
+/* Top Hero Header */
+.hero-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.title-emblem-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.shuriken-icon {
+  color: var(--orange-primary);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.sub-tag {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--orange-bright);
+}
+
+/* Dramatic Naruto Draft Title */
+.main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.95;
+  margin: 8px 0 16px;
+  font-family: var(--font-display);
+}
+
+.title-naruto {
+  font-size: clamp(3.2rem, 9vw, 5.8rem);
+  font-weight: 900;
+  letter-spacing: 6px;
+  background: linear-gradient(180deg, #ffffff 0%, #ffbe76 40%, #ff6a00 75%, #b71c1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 24px rgba(255, 106, 0, 0.45));
+}
+
+.title-draft {
+  font-size: clamp(2.4rem, 6.5vw, 4.4rem);
+  font-weight: 900;
+  letter-spacing: 12px;
+  color: #f8fafc;
+  text-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.9),
+    0 0 18px rgba(255, 106, 0, 0.5),
+    0 0 35px rgba(220, 38, 38, 0.3);
+  margin-top: 4px;
+  padding-left: 12px; /* optical balance for letter spacing */
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 2.8vw, 1.35rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 1.5px;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Divider with Ninja Diamond Knot */
+.title-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+  margin-top: 24px;
+}
+
+.divider-line {
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, rgba(255, 106, 0, 0.5), transparent);
+}
+
+.divider-knot {
+  color: var(--orange-primary);
+  font-size: 0.85rem;
+  filter: drop-shadow(0 0 8px var(--orange-glow));
+}
+
+/* Mode Selection Section */
+.mode-selection-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.section-label-wrap {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.section-label {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.section-label::before,
+.section-label::after {
+  content: '◆';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--orange-primary);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.section-label::before {
+  left: 0;
+}
+
+.section-label::after {
+  right: 0;
+}
+
+/* Mode Cards Grid: Desktop 2 Columns, Mobile 1 Column */
+.mode-cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  width: 100%;
+  max-width: 780px;
+}
+
+/* Selection Feedback Pill */
+.selection-feedback-banner {
+  margin-top: 28px;
+  background: rgba(18, 22, 33, 0.95);
+  border: 1px solid var(--orange-primary);
+  box-shadow: 0 0 20px rgba(255, 106, 0, 0.25);
+  border-radius: 999px;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: feedbackAppear 0.3s var(--ease-ninja);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@keyframes feedbackAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.feedback-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--orange-bright);
+  box-shadow: 0 0 8px var(--orange-bright);
+  animation: pulseBeacon 1.4s infinite ease-in-out;
+}
+
+@keyframes pulseBeacon {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.4);
+  }
+}
+
+.feedback-text {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.feedback-text strong {
+  color: var(--orange-bright);
+}
+
+.feedback-note {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.btn-start-draft-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ea580c 0%, #dc2626 100%);
+  border: 1px solid var(--orange-bright);
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 14px rgba(255, 106, 0, 0.45);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-start-draft-action:hover {
+  transform: translateY(-1px) scale(1.04);
+  box-shadow: 0 0 22px rgba(255, 106, 0, 0.8);
+  border-color: #ffffff;
+}
+
+.btn-start-draft-action:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Rules & Budget Scroll Panel (Parchment & Ninja Scroll Motif) */
+.rules-scroll-panel {
+  width: 100%;
+  max-width: 860px;
+  background: linear-gradient(180deg, rgba(28, 24, 20, 0.92) 0%, rgba(20, 18, 16, 0.95) 100%);
+  border: 1px solid rgba(217, 204, 180, 0.25);
+  border-radius: 16px;
+  padding: 32px 28px;
+  position: relative;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.65), inset 0 0 30px rgba(0, 0, 0, 0.5);
+  margin-bottom: 40px;
+}
+
+/* Decorative Scroll End Rollers (CSS-only) */
+.scroll-roller {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #c5a880, #e6d5b8, #c5a880, transparent);
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+.scroll-roller.top {
+  top: 6px;
+}
+
+.scroll-roller.bottom {
+  bottom: 6px;
+}
+
+/* Header with Budget & Squad Size */
+.rules-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(217, 204, 180, 0.15);
+  flex-wrap: wrap;
+}
+
+.budget-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-label {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--parchment-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  font-weight: 900;
+  color: #ffbe76;
+  text-shadow: 0 0 16px rgba(255, 190, 118, 0.4);
+  letter-spacing: 1.5px;
+}
+
+.rules-separator {
+  color: var(--orange-primary);
+  font-size: 1.2rem;
+  opacity: 0.6;
+}
+
+.roles-intro {
+  text-align: center;
+  margin: 20px 0 18px;
+}
+
+.roles-intro-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Roles Grid */
+.roles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Footer */
+.home-footer {
+  text-align: center;
+  padding-top: 16px;
+}
+
+.footer-copyright {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 32px 16px 48px;
+  }
+
+  .mode-cards-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .game-mode-card {
+    max-width: 100%;
+  }
+
+  .rules-scroll-panel {
+    padding: 24px 16px;
+  }
+
+  .rules-header {
+    gap: 16px;
+  }
+
+  .rules-separator {
+    display: none;
+  }
+
+  .selection-feedback-banner {
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+}

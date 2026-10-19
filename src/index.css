@@ -1,0 +1,96 @@
+:root {
+  /* Color Palette */
+  --bg-dark: #0c0d12;
+  --bg-deep: #08080b;
+  --bg-surface: #14161f;
+  --bg-card: rgba(22, 25, 36, 0.82);
+  --bg-card-hover: rgba(30, 34, 50, 0.95);
+
+  /* Orange & Red Accents (Fire & Chakra) */
+  --orange-primary: #ff6a00;
+  --orange-burnt: #e65100;
+  --orange-bright: #ff8533;
+  --orange-glow: rgba(255, 106, 0, 0.35);
+  --orange-subtle: rgba(255, 106, 0, 0.12);
+
+  --red-accent: #dc2626;
+  --red-crimson: #991b1b;
+  --red-glow: rgba(220, 38, 38, 0.35);
+  --red-subtle: rgba(220, 38, 38, 0.12);
+
+  /* Parchment / Beige Accents (Shinobi Scroll) */
+  --parchment: #f4ecdc;
+  --parchment-muted: #d9ccb4;
+  --parchment-dark: #2a2318;
+  --parchment-glow: rgba(244, 236, 220, 0.2);
+
+  /* Typography Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #788296;
+  --text-gold: #fbbf24;
+
+  /* Borders & Shadows */
+  --border-subtle: rgba(255, 106, 0, 0.22);
+  --border-highlight: rgba(255, 133, 51, 0.6);
+  --border-parchment: rgba(217, 204, 180, 0.3);
+  --shadow-chakra: 0 0 25px rgba(255, 106, 0, 0.25);
+  --shadow-crimson: 0 0 25px rgba(220, 38, 38, 0.25);
+  --shadow-card: 0 16px 36px -10px rgba(0, 0, 0, 0.7);
+
+  /* Fonts */
+  --font-display: 'Cinzel', serif;
+  --font-heading: 'Rajdhani', sans-serif;
+  --font-body: 'Outfit', sans-serif;
+
+  /* Transitions */
+  --ease-ninja: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: all 0.28s var(--ease-ninja);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 106, 0, 0.35);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--orange-primary);
+}

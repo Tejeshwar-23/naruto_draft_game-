@@ -1,0 +1,352 @@
+{
+  "naruto-uzumaki.webp": {
+    "character": "Naruto Uzumaki",
+    "provider": "AniList",
+    "anilistId": 17,
+    "sourcePage": "https://anilist.co/character/17",
+    "retrievedAt": "2026-10-19T22:18:35.784Z"
+  },
+  "sasuke-uchiha.webp": {
+    "character": "Sasuke Uchiha",
+    "provider": "AniList",
+    "anilistId": 13,
+    "sourcePage": "https://anilist.co/character/13",
+    "retrievedAt": "2026-10-19T22:18:38.905Z"
+  },
+  "sakura-haruno.webp": {
+    "character": "Sakura Haruno",
+    "provider": "AniList",
+    "anilistId": 145,
+    "sourcePage": "https://anilist.co/character/145",
+    "retrievedAt": "2026-10-19T22:18:42.052Z"
+  },
+  "kakashi-hatake.webp": {
+    "character": "Kakashi Hatake",
+    "provider": "AniList",
+    "anilistId": 85,
+    "sourcePage": "https://anilist.co/character/85",
+    "retrievedAt": "2026-10-19T22:18:45.197Z"
+  },
+  "itachi-uchiha.webp": {
+    "character": "Itachi Uchiha",
+    "provider": "AniList",
+    "anilistId": 14,
+    "sourcePage": "https://anilist.co/character/14",
+    "retrievedAt": "2026-10-19T22:18:48.311Z"
+  },
+  "madara-uchiha.webp": {
+    "character": "Madara Uchiha",
+    "provider": "AniList",
+    "anilistId": 53901,
+    "sourcePage": "https://anilist.co/character/53901",
+    "retrievedAt": "2026-10-19T22:18:51.371Z"
+  },
+  "obito-uchiha.webp": {
+    "character": "Obito Uchiha",
+    "provider": "AniList",
+    "anilistId": 3149,
+    "sourcePage": "https://anilist.co/character/3149",
+    "retrievedAt": "2026-10-19T22:18:54.536Z"
+  },
+  "pain-nagato.webp": {
+    "character": "Pain",
+    "provider": "AniList",
+    "anilistId": 3180,
+    "sourcePage": "https://anilist.co/character/3180",
+    "retrievedAt": "2026-10-19T22:18:57.587Z"
+  },
+  "konan.webp": {
+    "character": "Konan",
+    "provider": "AniList",
+    "anilistId": 3179,
+    "sourcePage": "https://anilist.co/character/3179",
+    "retrievedAt": "2026-10-19T22:19:00.570Z"
+  },
+  "minato-namikaze.webp": {
+    "character": "Minato Namikaze",
+    "provider": "AniList",
+    "anilistId": 2535,
+    "sourcePage": "https://anilist.co/character/2535",
+    "retrievedAt": "2026-10-19T22:19:03.813Z"
+  },
+  "hashirama-senju.webp": {
+    "character": "Hashirama Senju",
+    "provider": "AniList",
+    "anilistId": 12464,
+    "sourcePage": "https://anilist.co/character/12464",
+    "retrievedAt": "2026-10-19T22:19:07.102Z"
+  },
+  "tobirama-senju.webp": {
+    "character": "Tobirama Senju",
+    "provider": "AniList",
+    "anilistId": 12465,
+    "sourcePage": "https://anilist.co/character/12465",
+    "retrievedAt": "2026-10-19T22:19:10.275Z"
+  },
+  "hiruzen-sarutobi.webp": {
+    "character": "Hiruzen Sarutobi",
+    "provider": "AniList",
+    "anilistId": 7571,
+    "sourcePage": "https://anilist.co/character/7571",
+    "retrievedAt": "2026-10-19T22:19:13.464Z"
+  },
+  "tsunade-senju.webp": {
+    "character": "Tsunade",
+    "provider": "AniList",
+    "anilistId": 2767,
+    "sourcePage": "https://anilist.co/character/2767",
+    "retrievedAt": "2026-10-19T22:19:16.555Z"
+  },
+  "jiraiya.webp": {
+    "character": "Jiraiya",
+    "provider": "AniList",
+    "anilistId": 2423,
+    "sourcePage": "https://anilist.co/character/2423",
+    "retrievedAt": "2026-10-19T22:19:19.717Z"
+  },
+  "orochimaru.webp": {
+    "character": "Orochimaru",
+    "provider": "AniList",
+    "anilistId": 2455,
+    "sourcePage": "https://anilist.co/character/2455",
+    "retrievedAt": "2026-10-19T22:19:22.863Z"
+  },
+  "gaara.webp": {
+    "character": "Gaara",
+    "provider": "AniList",
+    "anilistId": 1662,
+    "sourcePage": "https://anilist.co/character/1662",
+    "retrievedAt": "2026-10-19T22:19:26.177Z"
+  },
+  "killer-b.webp": {
+    "character": "Killer B",
+    "provider": "AniList",
+    "anilistId": 18473,
+    "sourcePage": "https://anilist.co/character/18473",
+    "retrievedAt": "2026-10-19T22:19:29.297Z"
+  },
+  "might-guy.webp": {
+    "character": "Might Guy",
+    "provider": "AniList",
+    "anilistId": 307,
+    "sourcePage": "https://anilist.co/character/307",
+    "retrievedAt": "2026-10-19T22:19:32.512Z"
+  },
+  "rock-lee.webp": {
+    "character": "Rock Lee",
+    "provider": "AniList",
+    "anilistId": 306,
+    "sourcePage": "https://anilist.co/character/306",
+    "retrievedAt": "2026-10-19T22:19:35.662Z"
+  },
+  "neji-hyuga.webp": {
+    "character": "Neji Hyuga",
+    "provider": "AniList",
+    "anilistId": 1694,
+    "sourcePage": "https://anilist.co/character/1694",
+    "retrievedAt": "2026-10-19T22:19:38.588Z"
+  },
+  "hinata-hyuga.webp": {
+    "character": "Hinata Hyuga",
+    "provider": "AniList",
+    "anilistId": 1555,
+    "sourcePage": "https://anilist.co/character/1555",
+    "retrievedAt": "2026-10-19T22:19:41.709Z"
+  },
+  "shikamaru-nara.webp": {
+    "character": "Shikamaru Nara",
+    "provider": "AniList",
+    "anilistId": 2007,
+    "sourcePage": "https://anilist.co/character/2007",
+    "retrievedAt": "2026-10-19T22:19:44.994Z"
+  },
+  "choji-akimichi.webp": {
+    "character": "Choji Akimichi",
+    "provider": "AniList",
+    "anilistId": 2008,
+    "sourcePage": "https://anilist.co/character/2008",
+    "retrievedAt": "2026-10-19T22:19:48.269Z"
+  },
+  "kiba-inuzuka.webp": {
+    "character": "Kiba Inuzuka",
+    "provider": "AniList",
+    "anilistId": 3495,
+    "sourcePage": "https://anilist.co/character/3495",
+    "retrievedAt": "2026-10-19T22:19:51.290Z"
+  },
+  "tenten.webp": {
+    "character": "Tenten",
+    "provider": "AniList",
+    "anilistId": 3710,
+    "sourcePage": "https://anilist.co/character/3710",
+    "retrievedAt": "2026-10-19T22:19:54.397Z"
+  },
+  "kisame-hoshigaki.webp": {
+    "character": "Kisame Hoshigaki",
+    "provider": "AniList",
+    "anilistId": 2672,
+    "sourcePage": "https://anilist.co/character/2672",
+    "retrievedAt": "2026-10-19T22:19:57.450Z"
+  },
+  "deidara.webp": {
+    "character": "Deidara",
+    "provider": "AniList",
+    "anilistId": 1902,
+    "sourcePage": "https://anilist.co/character/1902",
+    "retrievedAt": "2026-10-19T22:20:00.772Z"
+  },
+  "sasori.webp": {
+    "character": "Sasori",
+    "provider": "AniList",
+    "anilistId": 1900,
+    "sourcePage": "https://anilist.co/character/1900",
+    "retrievedAt": "2026-10-19T22:20:03.878Z"
+  },
+  "kabuto-yakushi.webp": {
+    "character": "Kabuto Yakushi",
+    "provider": "AniList",
+    "anilistId": 2405,
+    "sourcePage": "https://anilist.co/character/2405",
+    "retrievedAt": "2026-10-19T22:20:06.950Z"
+  },
+  "temari.webp": {
+    "character": "Temari",
+    "provider": "AniList",
+    "anilistId": 2174,
+    "sourcePage": "https://anilist.co/character/2174",
+    "retrievedAt": "2026-10-19T22:59:34.547Z"
+  },
+  "kankuro.webp": {
+    "character": "Kankuro",
+    "provider": "AniList",
+    "anilistId": 4694,
+    "sourcePage": "https://anilist.co/character/4694",
+    "retrievedAt": "2026-10-19T22:59:37.717Z"
+  },
+  "shino-aburame.webp": {
+    "character": "Shino Aburame",
+    "provider": "AniList",
+    "anilistId": 3428,
+    "sourcePage": "https://anilist.co/character/3428",
+    "retrievedAt": "2026-10-19T22:59:40.906Z"
+  },
+  "sai.webp": {
+    "character": "Sai",
+    "provider": "AniList",
+    "anilistId": 1901,
+    "sourcePage": "https://anilist.co/character/1901",
+    "retrievedAt": "2026-10-19T22:59:44.506Z"
+  },
+  "yamato.webp": {
+    "character": "Yamato",
+    "provider": "AniList",
+    "anilistId": 2006,
+    "sourcePage": "https://anilist.co/character/2006",
+    "retrievedAt": "2026-10-19T22:59:47.861Z"
+  },
+  "asuma-sarutobi.webp": {
+    "character": "Asuma Sarutobi",
+    "provider": "AniList",
+    "anilistId": 4775,
+    "sourcePage": "https://anilist.co/character/4775",
+    "retrievedAt": "2026-10-19T22:59:51.067Z"
+  },
+  "zabuza-momochi.webp": {
+    "character": "Zabuza Momochi",
+    "provider": "AniList",
+    "anilistId": 728,
+    "sourcePage": "https://anilist.co/character/728",
+    "retrievedAt": "2026-10-19T22:59:53.992Z"
+  },
+  "haku.webp": {
+    "character": "Haku",
+    "provider": "AniList",
+    "anilistId": 2039,
+    "sourcePage": "https://anilist.co/character/2039",
+    "retrievedAt": "2026-10-19T22:59:57.339Z"
+  },
+  "nagato.webp": {
+    "character": "Nagato",
+    "provider": "AniList",
+    "anilistId": 3180,
+    "sourcePage": "https://anilist.co/character/3180",
+    "retrievedAt": "2026-10-19T23:00:00.673Z"
+  },
+  "kakuzu.webp": {
+    "character": "Kakuzu",
+    "provider": "AniList",
+    "anilistId": 3178,
+    "sourcePage": "https://anilist.co/character/3178",
+    "retrievedAt": "2026-10-19T23:00:03.662Z"
+  },
+  "hidan.webp": {
+    "character": "Hidan",
+    "provider": "AniList",
+    "anilistId": 2792,
+    "sourcePage": "https://anilist.co/character/2792",
+    "retrievedAt": "2026-10-19T23:00:06.892Z"
+  },
+  "chiyo.webp": {
+    "character": "Chiyo",
+    "provider": "AniList",
+    "anilistId": 12676,
+    "sourcePage": "https://anilist.co/character/12676",
+    "retrievedAt": "2026-10-19T23:00:11.263Z"
+  },
+  "darui.webp": {
+    "character": "Darui",
+    "provider": "AniList",
+    "anilistId": 23476,
+    "sourcePage": "https://anilist.co/character/23476",
+    "retrievedAt": "2026-10-19T23:00:15.763Z"
+  },
+  "a-fourth-raikage.webp": {
+    "character": "A (Fourth Raikage)",
+    "provider": "AniList",
+    "anilistId": 22894,
+    "sourcePage": "https://anilist.co/character/22894",
+    "retrievedAt": "2026-10-19T23:00:20.409Z"
+  },
+  "mei-terumi.webp": {
+    "character": "Mei Terumi",
+    "provider": "AniList",
+    "anilistId": 23478,
+    "sourcePage": "https://anilist.co/character/23478",
+    "retrievedAt": "2026-10-19T23:00:25.315Z"
+  },
+  "onoki.webp": {
+    "character": "Onoki",
+    "provider": "AniList",
+    "anilistId": 23475,
+    "sourcePage": "https://anilist.co/character/23475",
+    "retrievedAt": "2026-10-19T23:00:30.144Z"
+  },
+  "mifune.webp": {
+    "character": "Mifune",
+    "provider": "AniList",
+    "anilistId": 23830,
+    "sourcePage": "https://anilist.co/character/23830",
+    "retrievedAt": "2026-10-19T23:00:35.488Z"
+  },
+  "kimimaro.webp": {
+    "character": "Kimimaro",
+    "provider": "AniList",
+    "anilistId": 3438,
+    "sourcePage": "https://anilist.co/character/3438",
+    "retrievedAt": "2026-10-19T23:00:38.651Z"
+  },
+  "suigetsu-hozuki.webp": {
+    "character": "Suigetsu Hozuki",
+    "provider": "AniList",
+    "anilistId": 1903,
+    "sourcePage": "https://anilist.co/character/1903",
+    "retrievedAt": "2026-10-19T23:00:41.685Z"
+  },
+  "karin.webp": {
+    "character": "Karin",
+    "provider": "AniList",
+    "anilistId": 3151,
+    "sourcePage": "https://anilist.co/character/3151",
+    "retrievedAt": "2026-10-19T23:00:46.739Z"
+  }
+}

@@ -1,0 +1,126 @@
+.role-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(20, 22, 32, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 16px;
+  min-width: 160px;
+  flex: 1 1 calc(33.333% - 16px);
+  max-width: 260px;
+  transition: var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle corner mark */
+.role-badge-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--role-accent, var(--orange-primary));
+  opacity: 0.8;
+  transition: width 0.25s ease, opacity 0.25s ease;
+}
+
+.role-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.role-icon {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.role-text-box {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.role-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.role-tagline {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* Per-role custom accents */
+.role-captain {
+  --role-accent: #fbbf24;
+}
+.role-attacker {
+  --role-accent: #ef4444;
+}
+.role-tank {
+  --role-accent: #38bdf8;
+}
+.role-medic {
+  --role-accent: #10b981;
+}
+.role-support {
+  --role-accent: #a855f7;
+}
+.role-traitor {
+  --role-accent: #f43f5e;
+}
+
+/* Hover effects */
+.role-badge-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(28, 32, 46, 0.95);
+  box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.6);
+}
+
+.role-badge-item:hover::before {
+  width: 5px;
+  opacity: 1;
+}
+
+.role-badge-item:hover .role-icon-box {
+  transform: scale(1.1);
+  border-color: var(--role-accent);
+}
+
+.role-badge-item:hover .role-name {
+  color: var(--role-accent);
+}
+
+@media (max-width: 900px) {
+  .role-badge-item {
+    flex: 1 1 calc(50% - 12px);
+    min-width: 140px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 540px) {
+  .role-badge-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

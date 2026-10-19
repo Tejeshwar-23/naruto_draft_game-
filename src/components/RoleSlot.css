@@ -1,0 +1,187 @@
+.role-slot {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(18, 20, 28, 0.75);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.role-slot.empty:hover {
+  background: rgba(26, 30, 44, 0.85);
+  border-color: rgba(255, 106, 0, 0.35);
+}
+
+.role-slot.filled {
+  background: linear-gradient(135deg, rgba(28, 24, 22, 0.95) 0%, rgba(16, 17, 24, 0.98) 100%);
+  border: 1px solid var(--orange-primary, #ff6a00);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 106, 0, 0.1);
+}
+
+/* Icon box */
+.role-slot-icon-box {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  flex-shrink: 0;
+}
+
+.role-slot-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* Portrait wrapper inside slot */
+.role-slot-portrait-wrap {
+  flex-shrink: 0;
+}
+
+.role-slot-empty-indicator {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.empty-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Info section */
+.role-slot-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.role-slot-header-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1.2;
+}
+
+.role-slot-name {
+  font-family: var(--font-heading);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted, #94a3b8);
+}
+
+.role-slot-status {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.8px;
+  margin-top: 2px;
+}
+
+.role-slot-character {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1px;
+}
+
+.char-name {
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+}
+
+.char-version {
+  font-size: 0.68rem;
+  color: var(--orange-bright, #ff8c38);
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Cost badge */
+.role-slot-cost {
+  flex-shrink: 0;
+}
+
+.cost-tag {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Individual Role Accent Borders when filled */
+.role-slot-captain.filled {
+  border-color: #fbbf24;
+}
+.role-slot-attacker.filled {
+  border-color: #ef4444;
+}
+.role-slot-tank.filled {
+  border-color: #38bdf8;
+}
+.role-slot-medic.filled {
+  border-color: #10b981;
+}
+.role-slot-support.filled {
+  border-color: #a855f7;
+}
+
+/* Distinct Traitor Slot Styling (Danger / Liability Slot) */
+.role-slot-traitor.filled {
+  background: linear-gradient(135deg, rgba(38, 12, 18, 0.96) 0%, rgba(20, 10, 14, 0.98) 100%);
+  border: 1px solid #f43f5e;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6), inset 0 0 12px rgba(244, 63, 94, 0.2);
+}
+
+.role-slot-traitor.empty {
+  border-color: rgba(244, 63, 94, 0.3);
+  background: rgba(30, 14, 18, 0.5);
+}
+
+.role-slot-traitor .role-slot-icon-box {
+  background: rgba(244, 63, 94, 0.15);
+  border-color: rgba(244, 63, 94, 0.35);
+}
+
+.traitor-betray-badge {
+  font-family: var(--font-heading);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #fda4af;
+  background: rgba(244, 63, 94, 0.25);
+  border: 1px solid rgba(244, 63, 94, 0.6);
+  padding: 1px 4px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}

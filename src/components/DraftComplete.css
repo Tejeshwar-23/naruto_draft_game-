@@ -1,0 +1,355 @@
+/* ==========================================================================
+   Draft Complete Final Screen Styles
+   ========================================================================== */
+
+.draft-complete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 16px 40px;
+  animation: completeFadeIn 0.4s ease-out;
+}
+
+@keyframes completeFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header Banner */
+.complete-banner {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.complete-scroll-emblem {
+  font-size: 2.4rem;
+  margin-bottom: 4px;
+}
+
+.complete-heading {
+  font-family: var(--font-display, 'Impact', sans-serif);
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 0 24px rgba(255, 106, 0, 0.7);
+  line-height: 1.1;
+}
+
+.complete-subheading {
+  font-family: var(--font-heading, sans-serif);
+  font-size: 0.92rem;
+  letter-spacing: 1px;
+  color: var(--text-muted, #94a3b8);
+  margin: 6px 0 0;
+}
+
+/* 6-vs-6 Side-by-Side Showcase */
+.squads-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 16px;
+  width: 100%;
+  align-items: start;
+}
+
+.squad-column {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(165deg, rgba(22, 25, 36, 0.95) 0%, rgba(12, 14, 22, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  padding: 20px 18px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.85);
+}
+
+.squad-p1 {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.squad-p2 {
+  border-color: rgba(249, 115, 22, 0.4);
+}
+
+.squad-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.squad-header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.squad-avatar-icon {
+  font-size: 1.6rem;
+}
+
+.squad-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.squad-budget-left {
+  font-family: var(--font-heading);
+  font-size: 0.74rem;
+  color: #fbbf24;
+}
+
+.squad-status-badge {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.14);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+/* Cards Stack */
+.squad-roster-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.squad-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: rgba(16, 18, 28, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.squad-card:hover {
+  transform: translateY(-1px);
+  border-color: rgba(255, 106, 0, 0.4);
+}
+
+.squad-card-role {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+}
+
+.role-icon {
+  font-size: 0.95rem;
+}
+
+.role-name {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-muted, #94a3b8);
+}
+
+.traitor-liability-pill {
+  font-family: var(--font-heading);
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #fda4af;
+  background: rgba(244, 63, 94, 0.25);
+  border: 1px solid rgba(244, 63, 94, 0.6);
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-left: auto;
+}
+
+.squad-card-shinobi {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.squad-portrait-wrap {
+  flex-shrink: 0;
+}
+
+.squad-shinobi-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.shinobi-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shinobi-ver {
+  font-size: 0.72rem;
+  color: var(--orange-bright, #ff8c38);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.squad-shinobi-cost {
+  flex-shrink: 0;
+}
+
+.cost-pill {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #fbbf24;
+  background: rgba(251, 191, 36, 0.12);
+  border: 1px solid rgba(251, 191, 36, 0.35);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Distinct Traitor Card in Roster */
+.squad-card.is-traitor-card {
+  background: linear-gradient(135deg, rgba(38, 12, 18, 0.85) 0%, rgba(18, 10, 14, 0.9) 100%);
+  border-color: rgba(244, 63, 94, 0.5);
+  box-shadow: 0 0 12px rgba(244, 63, 94, 0.15);
+}
+
+/* Center VS Divider */
+.squads-vs-divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 12px;
+}
+
+.vs-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(255, 106, 0, 0.5), transparent);
+}
+
+.vs-emblem {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--orange-bright, #ff8c38);
+  background: #0d101a;
+  border: 2px solid var(--orange-primary, #ff6a00);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 18px rgba(255, 106, 0, 0.45);
+}
+
+/* Bottom Action Bar */
+.complete-actions-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+  width: 100%;
+}
+
+.btn-complete-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-complete-play-again {
+  color: #ffffff;
+  background: linear-gradient(135deg, #ea580c 0%, #b91c1c 100%);
+  border: 1px solid #f97316;
+  box-shadow: 0 4px 18px rgba(234, 88, 12, 0.4);
+}
+
+.btn-complete-play-again:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+  box-shadow: 0 6px 24px rgba(234, 88, 12, 0.6);
+}
+
+.btn-complete-home {
+  color: #e2e8f0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-complete-home:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Responsive Stacking for Tablets & Mobile */
+@media (max-width: 860px) {
+  .squads-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .squads-vs-divider {
+    flex-direction: row;
+    height: 40px;
+  }
+
+  .vs-line {
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(255, 106, 0, 0.5), transparent);
+  }
+
+  .complete-actions-bar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-complete-action {
+    width: 100%;
+    justify-content: center;
+  }
+}

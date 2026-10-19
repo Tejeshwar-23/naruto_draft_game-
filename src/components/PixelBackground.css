@@ -1,0 +1,368 @@
+/* Fullscreen Pixel Art Background Wrapper */
+.pixel-bg-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  background-color: #040508;
+  user-select: none;
+}
+
+/* Background Artwork SVG */
+.pixel-bg-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Layer 1: Dark Transparent Overlay & Readability Vignette
+   Preserves dark clear area in the center for the UI */
+.pixel-bg-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 65% 75% at 50% 50%, rgba(5, 6, 10, 0.94) 0%, rgba(5, 6, 10, 0.82) 50%, rgba(5, 6, 10, 0.35) 90%),
+    linear-gradient(180deg, rgba(4, 5, 8, 0.75) 0%, rgba(4, 5, 8, 0.15) 35%, rgba(4, 5, 8, 0.15) 65%, rgba(4, 5, 8, 0.85) 100%);
+  pointer-events: none;
+}
+
+/* Layer 2: Color Composition & Rim Lighting
+   Sasuke side (Left): Blue/Purple ambient wash
+   Center: Subtle warm orange glow behind title
+   Naruto side (Right): Burnt orange & blue ambient wash */
+.pixel-bg-lighting {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 58%, rgba(56, 189, 248, 0.14) 0%, rgba(126, 34, 206, 0.1) 45%, transparent 65%),
+    radial-gradient(circle at 50% 25%, rgba(255, 106, 0, 0.12) 0%, transparent 55%),
+    radial-gradient(circle at 82% 58%, rgba(2, 132, 199, 0.12) 0%, rgba(234, 88, 12, 0.1) 45%, transparent 65%);
+  pointer-events: none;
+}
+
+/* ----------------------------------------------------
+   CHIDORI (SASUKE - LEFT SIDE) ANIMATIONS
+   ---------------------------------------------------- */
+.chidori-aura {
+  animation: chidoriGlow 1.8s ease-in-out infinite alternate;
+}
+
+.chidori-bolts {
+  animation: chidoriFlicker 0.18s steps(2, start) infinite;
+}
+
+.chidori-sparks {
+  animation: chidoriSparkPulse 0.4s steps(3, start) infinite;
+}
+
+@keyframes chidoriGlow {
+  0% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.8)) drop-shadow(0 0 28px rgba(14, 165, 233, 0.5));
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 22px rgba(56, 189, 248, 1)) drop-shadow(0 0 45px rgba(2, 132, 199, 0.8));
+  }
+}
+
+@keyframes chidoriFlicker {
+  0% {
+    opacity: 0.95;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.98) translate(-1px, 1px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.02) translate(1px, -1px);
+  }
+}
+
+@keyframes chidoriSparkPulse {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+/* ----------------------------------------------------
+   RASENGAN (NARUTO - RIGHT SIDE) ANIMATIONS
+   ---------------------------------------------------- */
+.rasengan-orb-glow {
+  transform-origin: 1510px 580px;
+  animation: rasenganPulse 2.4s ease-in-out infinite alternate;
+}
+
+.rasengan-core-spin {
+  transform-origin: 1510px 580px;
+  animation: rasenganSpin 5s linear infinite;
+}
+
+.rasengan-wind-trails {
+  transform-origin: 1510px 580px;
+  animation: rasenganSpinReverse 7s linear infinite;
+}
+
+@keyframes rasenganPulse {
+  0% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.7)) drop-shadow(0 0 28px rgba(2, 132, 199, 0.5));
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 24px rgba(56, 189, 248, 0.95)) drop-shadow(0 0 50px rgba(14, 165, 233, 0.8));
+  }
+}
+
+@keyframes rasenganSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rasenganSpinReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ----------------------------------------------------
+   ATMOSPHERIC CLOUDS & FLOATING PARTICLES
+   ---------------------------------------------------- */
+.pixel-cloud-group {
+  animation: cloudDrift 100s linear infinite;
+}
+
+@keyframes cloudDrift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+.pixel-particles-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Floating Konoha Leaves */
+.pixel-leaf {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #f59e0b;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  opacity: 0;
+  animation: leafFall linear infinite;
+}
+
+.pixel-leaf.green {
+  background-color: #22c55e;
+}
+
+.pixel-leaf.orange {
+  background-color: #ea580c;
+}
+
+.pixel-leaf.blue-spark {
+  background-color: #38bdf8;
+  box-shadow: 0 0 6px #38bdf8;
+  width: 5px;
+  height: 5px;
+}
+
+.pixel-leaf:nth-child(1) {
+  left: 8%;
+  top: -20px;
+  animation-duration: 16s;
+  animation-delay: 1s;
+}
+
+.pixel-leaf:nth-child(2) {
+  left: 20%;
+  top: -20px;
+  animation-duration: 22s;
+  animation-delay: 5s;
+}
+
+.pixel-leaf:nth-child(3) {
+  left: 78%;
+  top: -20px;
+  animation-duration: 18s;
+  animation-delay: 3s;
+}
+
+.pixel-leaf:nth-child(4) {
+  left: 90%;
+  top: -20px;
+  animation-duration: 21s;
+  animation-delay: 7s;
+}
+
+.pixel-leaf:nth-child(5) {
+  left: 96%;
+  top: -20px;
+  animation-duration: 17s;
+  animation-delay: 10s;
+}
+
+.pixel-leaf:nth-child(6) {
+  left: 14%;
+  top: -20px;
+  animation-duration: 15s;
+  animation-delay: 8s;
+}
+
+@keyframes leafFall {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg) translateX(0);
+  }
+  15% {
+    opacity: 0.6;
+  }
+  85% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(105vh) rotate(360deg) translateX(60px);
+  }
+}
+
+/* Tiny Rising Embers */
+.pixel-ember {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #ff6a00;
+  box-shadow: 0 0 6px #ff8533;
+  opacity: 0;
+  animation: emberRise linear infinite;
+}
+
+.pixel-ember:nth-child(7) {
+  left: 84%;
+  bottom: 0;
+  animation-duration: 12s;
+  animation-delay: 2s;
+}
+
+.pixel-ember:nth-child(8) {
+  left: 16%;
+  bottom: 0;
+  animation-duration: 14s;
+  animation-delay: 4s;
+}
+
+@keyframes emberRise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.8);
+  }
+  20% {
+    opacity: 0.65;
+  }
+  80% {
+    opacity: 0.65;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80vh) scale(0.3);
+  }
+}
+
+/* ----------------------------------------------------
+   RESPONSIVENESS
+   ---------------------------------------------------- */
+@media (max-width: 1400px) {
+  .pixel-bg-sasuke {
+    opacity: 0.85;
+    transform: scale(0.92) translate(-30px, 40px);
+    transform-origin: bottom left;
+  }
+  .pixel-bg-naruto {
+    opacity: 0.85;
+    transform: scale(0.92) translate(30px, 40px);
+    transform-origin: bottom right;
+  }
+}
+
+@media (max-width: 1100px) {
+  .pixel-bg-sasuke {
+    opacity: 0.6;
+    transform: scale(0.8) translate(-60px, 80px);
+    transform-origin: bottom left;
+  }
+  .pixel-bg-naruto {
+    opacity: 0.6;
+    transform: scale(0.8) translate(60px, 80px);
+    transform-origin: bottom right;
+  }
+  .pixel-bg-vignette {
+    background:
+      radial-gradient(ellipse 80% 85% at 50% 50%, rgba(5, 6, 10, 0.95) 0%, rgba(5, 6, 10, 0.88) 55%, rgba(5, 6, 10, 0.5) 90%),
+      linear-gradient(180deg, rgba(4, 5, 8, 0.85) 0%, rgba(4, 5, 8, 0.4) 30%, rgba(4, 5, 8, 0.4) 70%, rgba(4, 5, 8, 0.92) 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  /* On mobile: keep characters faded/cropped so UI is completely unobstructed */
+  .pixel-bg-sasuke {
+    opacity: 0.22;
+    transform: scale(0.7) translate(-100px, 120px);
+    transform-origin: bottom left;
+  }
+  .pixel-bg-naruto {
+    opacity: 0.22;
+    transform: scale(0.7) translate(100px, 120px);
+    transform-origin: bottom right;
+  }
+  .pixel-bg-vignette {
+    background:
+      radial-gradient(ellipse 90% 90% at 50% 50%, rgba(5, 6, 10, 0.97) 0%, rgba(5, 6, 10, 0.92) 60%, rgba(5, 6, 10, 0.75) 100%),
+      linear-gradient(180deg, rgba(4, 5, 8, 0.9) 0%, rgba(4, 5, 8, 0.7) 100%);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .chidori-aura,
+  .chidori-bolts,
+  .chidori-sparks,
+  .rasengan-orb-glow,
+  .rasengan-core-spin,
+  .rasengan-wind-trails,
+  .pixel-cloud-group,
+  .pixel-leaf,
+  .pixel-ember {
+    animation: none !important;
+  }
+}
